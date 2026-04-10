@@ -13,9 +13,9 @@ $$
 P(Y \mid X = x)
 $$
 
-using **Mapper graph neighborhoods** instead of standard metric-based neighborhoods.
+where estimation is based on observations selected through **Mapper graph neighborhoods**, rather than standard metric-based neighborhoods.
 
-- Data is projected via a **filter function (OASDA)**
+- Data is projected via a **filter function: Ordinal Accelerated Sparse Discriminant Analysis (OASDA)**
 - A **data-driven overlapping cover** is constructed
 - **Clustering + graph connectivity** defines local neighborhoods
 - Prediction is performed via **localized weighted averaging**
@@ -28,9 +28,9 @@ using **Mapper graph neighborhoods** instead of standard metric-based neighborho
 - 🔬 Designed for high-dimensional biomedical data  
 - ⚙️ Data-driven cover selection (bias–variance trade-off)  
 - 📈 Works for:
-  - Binary outcomes  
+  - Ordinal outcomes 
   - Nominal classification  
-  - Ordinal outcomes  
+  - Binary outcomes  
 - 🔍 Permutation-based variable importance  
 - 📐 Theoretical guarantees:
   - Consistency  
@@ -79,11 +79,28 @@ For a new point:
 ---
 
 ### 3. Cover Selection
+ 
+Parameters are selected using a data-driven bias–variance trade-off
+where Loss Function: 
 
+$$
+L(S,l)=\rho S^{-1}+(1-\rho)l^{-4}, \quad \rho\in(0,1)
+$$
+
+under constraint 
+
+$$
+S+(l-1)q=n, \quad \frac{S}{2} \le q \le S
+$$
+
+ 
 Optimal scaling:
 
-- Number of intervals: `l ~ n^(1/5)`  
-- Observations per interval: `S ~ n^(4/5)`  
+- Number of intervals: `l=\left( \frac{n(1 - \rho)}{\rho} \right)^{1/5}`  
+- Observations per interval: `S=2n/(l^*+1)`
+- Shift between consecutive intervals: `q=n/(l^*+1)`  
+- So, overlap: `q/S=1/2`
+- The tuning parameter `\rho` is selected by cross-validated predictive performance over a prespecified grid 
 
 This balances:
 - Bias (oversmoothing)  
@@ -150,3 +167,44 @@ This figure illustrates Mapper-derived structure in high-dimensional RNA-seq dat
 
 ---
 
+
+
+## How to Use
+
+1. Clone the repository:
+git clone https://github.com/MoinulAhsan/TDA_Mapper_Prediction.git
+
+2. Navigate to:
+
+Simulation Study/  
+Real Data Analysis/  
+
+3. Run scripts to:
+
+- Generate data  
+- Build Mapper graph  
+- Perform prediction  
+- Evaluate performance  
+
+---
+
+## Citation
+
+If you use this work, please cite:
+
+Ahsan, M. M., Das, P., Mukhopadhyay, N. D.  
+
+*Mapper-Based Localized Prediction with Data-Driven Cover Selection for High-Dimensional Data*
+---
+
+## Contact
+
+**Md Moinul Ahsan**  
+*Virginia Commonwealth University*  
+📧 Email: [ahsanm8@vcu.edu](mailto:ahsanm8@vcu.edu)
+
+---
+
+## Keywords
+
+**Topological Data Analysis (TDA)**, Mapper, Prediction, High-Dimensional Data, Nonparametric Classification, Biomedical Data
