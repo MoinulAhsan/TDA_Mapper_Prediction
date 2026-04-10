@@ -115,13 +115,13 @@ We evaluate performance under:
 Predict Hoehn–Yahr stage  
 
 <p align="center">
-  <img src="Images/Mapper_plot.png" width="45%" />
-  <img src="Images/tSNE_plot.png" width="45%" />
+  <img src="Images/PPMI.png" width="45%" />
+  <img src="Images/PPMI_t_SNE.png" width="45%" />
 </p>
 
 <p align="center">
-  <b>Left:</b> Mapper Plot &nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Right:</b> t-SNE Plot
+  <b>Mapper Plot</b> &nbsp;&nbsp;&nbsp;&nbsp;
+  <b>t-SNE Plot</b>
 </p>
 
 ### 2. TCGA Glioma (UCSC Xena)
