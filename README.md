@@ -39,17 +39,21 @@ using **Mapper graph neighborhoods** instead of standard metric-based neighborho
 ---
 
 ## Repository Structure
-Simulation Study/
-│── Scenario 1
-│── Scenario 2
-Real Data Analysis/
-│── PPMI
-│── UCSC Xena
-Images/
-│── PPMI.png
-│── Final_UCSC_Xena.png
-README.md
 
+```text
+.
+├── Simulation Study/
+│   ├── Scenario 1/
+│   └── Scenario 2/
+├── Real Data Analysis/
+│   ├── PPMI/
+│   └── UCSC Xena/
+├── Images/
+│   ├── PPMI.png
+│   └── Final_UCSC_Xena.png
+└── README.md
+
+```
 
 ---
 
@@ -78,8 +82,8 @@ For a new point:
 
 Optimal scaling:
 
-- Number of intervals: \( l \sim n^{1/5} \)  
-- Observations per interval: \( S \sim n^{4/5} \)  
+- Number of intervals: `l ~ n^(1/5)`  
+- Observations per interval: `S ~ n^(4/5)`  
 
 This balances:
 - Bias (oversmoothing)  
