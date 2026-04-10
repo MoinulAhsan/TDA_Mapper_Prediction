@@ -114,15 +114,20 @@ We evaluate performance under:
 ### 1. Parkinson’s Disease (PPMI)
 Predict Hoehn–Yahr stage  
 
-<p align="center">
-  <img src="Images/PPMI.png" width="45%" />
-  <img src="Images/PPMI_t_SNE.png" width="45%" />
-</p>
+<table align="center">
+<tr>
+<td align="center">
+<img src="Images/Mapper_plot.png" width="300"><br>
+<b>Mapper Plot</b>
+</td>
 
-<p align="center">
-  <b>Mapper Plot</b> &nbsp;&nbsp;&nbsp;&nbsp;
-  <b>t-SNE Plot</b>
-</p>
+<td align="center">
+<img src="Images/tSNE_plot.png" width="300"><br>
+<b>t-SNE Plot</b>
+</td>
+</tr>
+</table>
+
 
 ### 2. TCGA Glioma (UCSC Xena)
 Classify tumor severity from RNA-seq data  
