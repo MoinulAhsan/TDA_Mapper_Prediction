@@ -96,11 +96,11 @@ $$
  
 Optimal scaling:
 
-- Number of intervals: `l=\left( \frac{n(1 - \rho)}{\rho} \right)^{1/5}`  
-- Observations per interval: `S=2n/(l^*+1)`
-- Shift between consecutive intervals: `q=n/(l^*+1)`  
-- So, overlap: `q/S=1/2`
-- The tuning parameter `\rho` is selected by cross-validated predictive performance over a prespecified grid 
+- Number of intervals: $l=\left( \frac{n(1 - \rho)}{\rho} \right)^{1/5}$
+- Observations per interval: $S=2n/(l^*+1)$
+- Shift between consecutive intervals: $q=n/(l^*+1)$ 
+- So, overlap: $q/S=1/2$
+- The tuning parameter $\rho$ is selected by cross-validated predictive performance over a prespecified grid 
 
 This balances:
 - Bias (oversmoothing)  
