@@ -5,7 +5,7 @@ This repository implements a **Mapper-based localized prediction framework** for
 
 ---
 
-##🔑 Key Idea
+## 🔑 Key Idea
 
 We model prediction as estimation of conditional probabilities:
 
@@ -38,7 +38,7 @@ where estimation is based on observations selected through **Mapper graph neighb
 
 ---
 
-##📂 Repository Structure
+## 📂 Repository Structure
 
 ```text
 .
